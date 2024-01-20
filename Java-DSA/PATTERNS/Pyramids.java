@@ -46,6 +46,31 @@ Q7
 -34543
 4567654
 ---------------------------------
+Q8
+---*
+--***
+-*****
+*******
+-*****
+--***
+---*
+---------------------------------
+Q9 (odd numbers only )
+--*
+-***
+*****
+-***
+--*
+---------------------------------
+Q10
+4-3-2-1
+3-2-1
+2-1
+1
+2-1
+3-2-1
+4-3-2-1 
+---------------------------------
  */
 public class Pyramids {
     public static void main(String[] args) {
@@ -65,7 +90,7 @@ public class Pyramids {
             }
             System.out.println();
         }
-        System.out.println("-------------");
+        System.out.println("---------------------------------");
 
         // Q2
         for (int i = 1; i <= n; i++) {
@@ -78,7 +103,7 @@ public class Pyramids {
             }
             System.out.println();
         }
-        System.out.println("-------------");
+        System.out.println("---------------------------------");
 
         // Q3
         for (int i = 1; i <= n; i++) {
@@ -94,7 +119,7 @@ public class Pyramids {
             }
             System.out.println();
         }
-        System.out.println("-------------");
+        System.out.println("---------------------------------");
 
         // Q4
         for (int i = 1; i <= n; i++) {
@@ -103,7 +128,7 @@ public class Pyramids {
             }
             System.out.println();
         }
-        System.out.println("-------------");
+        System.out.println("---------------------------------");
 
         // Q5
         for (int i = 1; i <= n; i++) {
@@ -115,7 +140,7 @@ public class Pyramids {
             }
             System.out.println();
         }
-        System.out.println("-------------");
+        System.out.println("---------------------------------");
 
         // Q6
         for (int i = 1; i <= n; i++) {
@@ -133,7 +158,7 @@ public class Pyramids {
                 System.out.println();
             }
         }
-        System.out.println("-------------");
+        System.out.println("---------------------------------");
 
         // Q7
         for (int i = 1; i <= n; i++) {
@@ -148,6 +173,70 @@ public class Pyramids {
             }
             System.out.println();
         }
-        System.out.println("-------------");
+        System.out.println("---------------------------------");
+
+        // Q8
+        for (int i = 1; i <= n; i++) {
+            // print spaces n-i times
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print("-");
+            }
+            for (int k = 1; k <= 2 * i - 1; k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+      
+        for (int i = n-1; i > 0; i--) {
+            for (int j = n ; j > i ; j --) {
+                System.out.print("-");
+            }
+            for (int k = 0; k < 2*i - 1 ; k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        System.out.println("---------------------------------");
+    
+        // Q9
+        int middle = (n+1)/2 ;
+        for (int i = 1; i <= middle; i++) {
+
+            for (int j = i; j < middle ; j++){
+                System.out.print("-");
+            }
+            for (int k = 1; k <= 2 * i - 1; k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        
+        for (int i = middle-1  ; i > 0 ; i--) {
+            for (int j = 1 ; j < middle-i+1 ; j ++) {
+                System.out.print("-");
+            }
+            for (int k = 1 ; k <= 2*i - 1 ; k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        System.out.println("---------------------------------");
+
+        // Q10
+        for (int i = 0; i < n; i++) {
+            // print spaces n-i times
+            for (int j = n-i; j > 0; j--) {
+                System.out.print(j+" ");
+            }
+            System.out.println();
+        }
+      
+        for (int i = 1; i <= n-1 ; i++) {
+            for (int j = i+1 ; j >0 ; j --) {
+                System.out.print(j+" ");
+            }
+            System.out.println();
+        }
+        System.out.println("---------------------------------");
     }
 }

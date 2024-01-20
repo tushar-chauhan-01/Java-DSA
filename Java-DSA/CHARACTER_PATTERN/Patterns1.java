@@ -25,7 +25,12 @@ CD
 BCD
 ABCD
 ------------------------------
-
+Q5
+D
+DC
+DCB
+DCBA
+------------------------------
 
 
  */
@@ -34,6 +39,7 @@ public class Patterns1 {
 
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
+        sc.close();
 
         System.out.println("------------------------------");
         
@@ -67,6 +73,15 @@ public class Patterns1 {
         // Q4
         for (int i = n; i > 0; i--) {
 			for (int j = i; j <= n; j++) {
+				System.out.print((char) ('A' + j - 1));
+			}
+			System.out.println();
+		}
+        System.out.println("------------------------------");
+
+        // Q5
+        for (int i = n; i > 0; i--) {
+			for (int j = n; j >= i ; j--) {
 				System.out.print((char) ('A' + j - 1));
 			}
 			System.out.println();

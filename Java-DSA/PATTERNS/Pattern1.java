@@ -4,7 +4,16 @@
 101
 0101
 10101 
+
+432*
+43*1
+4*21
+*321
+
 */
+
+import java.util.Scanner;
+
 public class Pattern1 {
     public static void main(String[] args) {
         int N = 5, start = 1;
@@ -21,6 +30,22 @@ public class Pattern1 {
             }
             System.out.println();
         }
-    }
 
+        Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		sc.close();
+
+		for (int i=1 ; i<=n ; i++){
+			for(int j=n; j>0;j--){
+				if (j==i){
+					System.out.print("*");
+				}
+				else{
+					System.out.print(j);
+				}
+			}
+			System.out.println();
+		}
+    
+    }
 }

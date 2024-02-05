@@ -16,5 +16,12 @@ public class Array {
         }
         System.out.println();
 
+        //////////// FOR EACH LOOP METHOD
+
+        for (int i:arr2){
+            System.out.print(i+" ");
+        }
+        System.out.println();
+
     }
 }

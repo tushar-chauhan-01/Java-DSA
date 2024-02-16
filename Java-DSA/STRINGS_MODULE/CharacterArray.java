@@ -7,5 +7,6 @@ public class CharacterArray {
         System.out.println(arr.toString()); // prints memory location
 
         System.out.println(Character.toUpperCase(arr[0])); // convert char to uppercase
+
     }
 }

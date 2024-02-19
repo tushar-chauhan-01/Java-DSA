@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class StringIntro {
     public static void main(String[] args) {
@@ -24,5 +25,19 @@ public class StringIntro {
         // Passing byte array
         char lst1[] = {97,98,99,100,101};
         System.out.println(lst1);
+
+        //// User Runtime Input
+        Scanner sc = new Scanner(System.in);
+
+        // ALL WORDS IN SENTENCES ARE TOKEN AND ALL SPACES ARE CALLED DELIMITER."ENTER OR \N IS ALSO A DELIMITER."
+        //nextline - SEARCHES FOR \N OR ENTER AND THEN STOP INPUT
+        String input = sc.nextLine();//John Doe
+        System.out.println(input);//John Doe
+
+        //next - SEARCES FOR BLANK SPACE OR \N AKA NEXT LINE AND THEN STOPS INPUT
+        String input1 = sc.next();// John Doe
+        System.out.println(input1);//John
+
+        sc.close();
     }
 }
